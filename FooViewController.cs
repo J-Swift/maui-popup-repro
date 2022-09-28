@@ -1,13 +1,6 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Core.Views;
 using System.Runtime.InteropServices;
-using AuthenticationServices;
-using CoreGraphics;
-using UIKit;
-using Foundation;
 using MauiB2C.MSALClient;
 using Microsoft.Maui.Accessibility;
 using Microsoft.Maui.ApplicationModel;
@@ -68,20 +61,6 @@ internal class LoginService
     {
         var result = await PCAWrapperB2C.Instance.AcquireTokenInteractiveAsync(parent).ConfigureAwait(false);
         return result;
-
-        // var callbackURLScheme = NetworkRequest.callbackURLScheme;
-        // let callbackURLScheme = NetworkRequest.callbackURLScheme
-        // var url = new NSUrl("");
-        // var callbackScheme = "";
-        // var authenticationSession = new ASWebAuthenticationSession(
-        //     url,
-        //     callbackScheme,
-        //     (callbackUrl, error) =>
-        //     {
-        //         
-        //     }
-        // );
-        // return false;
     }
 }
 
